@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>保可淨清腸藥品與飲食圖文指引</title>
+  <style>
+    :root {
+      --primary: #1565c0;
+      --primary-dark: #0d47a1;
+      --accent: #d32f2f;
+      --bg: #f4f7f9;
+      --card-bg: #ffffff;
+      --text: #212529;
+      --border: #cfd8dc;
+      --green: #2e7d32;
+      --green-bg: #e8f5e9;
+      --red-bg: #ffebee;
+      --yellow-bg: #fffde7;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Microsoft JhengHei", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1976d2, #0d47a1);
+      color: white;
+      padding: 24px 20px;
+      border-radius: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    .sub-title {
+      font-size: 20px;
+      opacity: 0.95;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 2px solid var(--border);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    .card-title {
+      font-size: 26px;
+      font-weight: bold;
+      color: var(--primary-dark);
+      margin-top: 0;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px dashed #eceff1;
+      padding-bottom: 12px;
+    }
+
+    .warning-banner {
+      background-color: #ffebee;
+      border: 3px solid var(--accent);
+      color: var(--accent);
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    label {
+      font-size: 22px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      font-size: 22px;
+      padding: 14px;
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      background: #fff;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-audio {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-audio:hover {
+      background: #1b5e20;
+    }
+
+    /* 4 步驟泡藥圖文網格 */
+    .mix-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .mix-step-card {
+      border: 2px solid #bbdefb;
+      background: #e3f2fd;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .step-number {
+      background: var(--primary);
+      color: white;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .step-img {
+      width: 80px;
+      height: 80px;
+      margin: 8px auto;
+      display: block;
+    }
+
+    .step-text {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0d47a1;
+    }
+
+    /* 飲食清單圖文網格 */
+    .food-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .food-icon-item {
+      background: white;
+      border-radius: 12px;
+      padding: 12px 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .food-icon-svg {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 6px;
+      display: block;
+    }
+
+    .food-label {
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    /* 排便清澈度圖示 */
+    .stool-check-box {
+      background: #f1f8e9;
+      border: 2px solid #81c784;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .stool-status-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .liquid-sample {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid #66bb6a;
+      background-color: #fff9c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    /* 時間線 */
+    .timeline-item {
+      padding: 16px;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border-left: 8px solid var(--primary);
+      background-color: #fafafa;
+    }
+
+    .timeline-item.highlight {
+      background-color: #fffde7;
+      border-left-color: #fbc02d;
+    }
+
+    .timeline-item.urgent {
+      background-color: #ffebee;
+      border-left-color: #e53935;
+    }
+
+    .time-badge {
+      display: inline-block;
+      background: #37474f;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 600px) {
+      .mix-grid { grid-template-columns: 1fr; }
+      .food-card-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>保可淨大腸鏡檢 完整圖文衛教</h1>
+    <div class="sub-title">輸入檢查時間，自動產生服藥作息與飲食圖卡</div>
+  </header>
+
+  <!-- 檢查時間輸入區 -->
+  <div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <span style="font-weight:bold; font-size:20px;">🔊 選擇朗讀語言：</span>
+      <select id="voiceLang" style="width: auto; margin-bottom: 0; padding: 6px 12px; font-size: 18px;">
+        <option value="zh-TW">國語 (臺灣)</option>
+      </select>
+    </div>
+
+    <label for="examDate">📅 請選擇檢查日期：</label>
+    <input type="date" id="examDate">
+
+    <label for="examTime">⏰ 請選擇檢查報到時間：</label>
+    <input type="time" id="examTime" value="09:00">
+
+    <label for="examType">🩺 請選擇檢查類別：</label>
+    <select id="examType">
+      <option value="normal_colon">一般大腸鏡檢查</option>
+      <option value="normal_colon_stomach">一般大腸鏡 + 胃鏡檢查</option>
+      <option value="painless_morning">無痛大腸鏡 (上午受檢)</option>
+      <option value="painless_afternoon">無痛大腸鏡 (下午受檢)</option>
+    </select>
+
+    <button class="btn" onclick="generateSchedule()">產生個人服藥日程與圖文說明</button>
+  </div>
+
+  <!-- 重要警訊 -->
+  <div class="warning-banner">
+    ⚠️ 絕對不可直接吞服藥粉！以免造成食道灼傷！
+  </div>
+
+  <div id="resultArea" style="display:none;">
+
+    <!-- 1. 清腸劑泡製四步驟圖解 (SVG圖案) -->
+    <div class="card" id="mixCard">
+      <div class="card-title">
+        <span>🥣 清腸劑泡製 4 步驟圖解</span>
+        <button class="btn-audio" onclick="readCard('mixCard')">🔊 語音說明</button>
+      </div>
+
+      <div class="mix-grid">
+        <!-- 步驟 1 -->
+        <div class="mix-step-card">
+          <div class="step-number">1</div>
+          <svg class="step-img" viewBox="0 0 100 100">
+            <!-- 杯子 -->
+            <path d="M25 20 L35 85 Q35 90 40 90 L60 90 Q65 90 65 85 L75 20 Z" fill="#e1f5fe" stroke="#0288d1" stroke-width="4"/>
+            <!-- 水位線 -->
+            <path d="M30 50 Q50 55 70 50 L66 82 Q65 86 60 86 L40 86 Q35 86 34 82 Z" fill="#81d4fa"/>
+            <!-- 標示 -->
+            <text x="50" y="68" font-size="12" font-weight="bold" fill="#01579b" text-anchor="middle">150 c.c.</text>
+          </svg>
+          <div class="step-text">杯中盛裝<br>150 c.c. 冷開水</div>
+        </div>
+
+        <!-- 步驟 2 -->
+        <div class="mix-step-card">
+          <div class="step-number">2</div>
+          <svg class="step-img" viewBox="0 0 100 100">
+            <!-- 藥包倒粉末 -->
+            <polygon points="30,10 60,10 50,45 20,45" fill="#cfd8dc" stroke="#546e7a" stroke-width="3"/>
+            <text x="38" y="32" font-size="10" font-weight="bold" fill="#263238" text-anchor="middle">保可淨</text>
+            <circle cx="48" cy="55" r="2" fill="#546e7a"/>
+            <circle cx="53" cy="62" r="2.5" fill="#546e7a"/>
+            <circle cx="46" cy="70" r="2" fill="#546e7a"/>
+            <!-- 杯口 -->
+            <ellipse cx="50" cy="85" rx="30" ry="8" fill="#e1f5fe" stroke="#0288d1" stroke-width="3"/>
+          </svg>
+          <div class="step-text">倒入<br>1 包完整藥粉</div>
+        </div>
+
+        <!-- 步驟 3 -->
+        <div class="mix-step-card">
+          <div class="step-number">3</div>
+          <svg class="step-img" viewBox="0 0 100 100">
+            <!-- 杯子與攪拌棒 -->
+            <path d="M30 30 L38 85 Q38 90 42 90 L58 90 Q62 90 62 85 L70 30 Z" fill="#e1f5fe" stroke="#0288d1" stroke-width="4"/>
+            <!-- 攪拌棒 -->
+            <line x1="68" y1="10" x2="45" y2="78" stroke="#78909c" stroke-width="5" stroke-linecap="round"/>
+            <!-- 旋轉箭頭 -->
+            <path d="M 40 45 A 12 8 0 1 1 60 45" fill="none" stroke="#f57c00" stroke-width="3" marker-end="url(#arrow)"/>
+          </svg>
+          <div class="step-text">用湯匙攪拌<br>3 至 5 分鐘</div>
+        </div>
+
+        <!-- 步驟 4 -->
+        <div class="mix-step-card">
+          <div class="step-number">4</div>
+          <svg class="step-img" viewBox="0 0 100 100">
+            <!-- 飲用圖解人臉輪廓 -->
+            <circle cx="50" cy="50" r="35" fill="#ffe0b2" stroke="#ffb74d" stroke-width="3"/>
+            <path d="M35 55 Q50 70 65 55" fill="none" stroke="#e65100" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="40" cy="42" rx="4" ry="6" fill="#3e2723"/>
+            <ellipse cx="60" cy="42" rx="4" ry="6" fill="#3e2723"/>
+            <!-- 水杯 -->
+            <rect x="62" y="52" width="20" height="26" rx="4" fill="#81d4fa" stroke="#0288d1" stroke-width="3"/>
+          </svg>
+          <div class="step-text">攪拌溶解後<br>立即喝完藥液</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 個人化動態排程 -->
+    <div class="card" id="timelineCard">
+      <div class="card-title">
+        <span>⏰ 您的專屬吃藥與喝水時間表</span>
+        <button class="btn-audio" onclick="readCard('timelineCard')">🔊 語音說明</button>
+      </div>
+      <div id="scheduleTimeline"></div>
+    </div>
+
+    <!-- 3. 前兩天與前一天飲食衛教圖文 -->
+    <div class="card" id="dietCard">
+      <div class="card-title">
+        <span>🥗 檢查前 1 ~ 2 天飲食圖解指南</span>
+        <button class="btn-audio" onclick="readCard('dietCard')">🔊 語音說明</button>
+      </div>
+
+      <!-- 檢查前 2 天 -->
+      <div style="margin-bottom: 24px;">
+        <h3 style="color:var(--primary); margin: 4px 0 10px 0;">📅 檢查前 2 天：自主低渣飲食</h3>
+        <p style="margin: 0 0 10px 0; font-size: 19px;">只吃好消化、無纖維殘渣的食物，幫助腸道排空乾淨。</p>
+
+        <div style="background: var(--green-bg); border: 2px solid #a5d6a7; border-radius: 12px; padding: 14px; margin-bottom: 12px;">
+          <strong style="color: #1b5e20; font-size: 21px;">⭕ 可以吃的食物（請選擇這類）：</strong>
+          <div class="food-card-grid">
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <path d="M12 28 C12 44 20 54 32 54 C44 54 52 44 52 28 Z" fill="#fafafa" stroke="#9e9e9e" stroke-width="3"/>
+                <ellipse cx="32" cy="28" rx="20" ry="8" fill="#e0e0e0"/>
+                <text x="32" y="32" font-size="11" fill="#424242" text-anchor="middle">粥</text>
+              </svg>
+              <div class="food-label">白稀飯 / 白飯</div>
+            </div>
+
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <rect x="14" y="14" width="36" height="36" rx="6" fill="#fff9c4" stroke="#fbc02d" stroke-width="3"/>
+                <rect x="18" y="18" width="28" height="28" rx="4" fill="#ffffff"/>
+              </svg>
+              <div class="food-label">白吐司 (去邊)</div>
+            </div>
+
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <path d="M14 30 C14 46 22 52 32 52 C42 52 50 46 50 30 Z" fill="#eeeeee" stroke="#757575" stroke-width="3"/>
+                <path d="M22 28 Q32 36 42 28 M20 24 Q32 32 44 24" stroke="#ffb74d" stroke-width="3" fill="none"/>
+              </svg>
+              <div class="food-label">白麵條 / 白麵線</div>
+            </div>
+
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <ellipse cx="32" cy="36" rx="22" ry="16" fill="#fff59d" stroke="#fbc02d" stroke-width="3"/>
+                <ellipse cx="32" cy="34" rx="16" ry="10" fill="#fff9c4"/>
+              </svg>
+              <div class="food-label">無料蒸蛋</div>
+            </div>
+
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <ellipse cx="32" cy="34" rx="20" ry="15" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="3"/>
+              </svg>
+              <div class="food-label">白饅頭</div>
+            </div>
+
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <path d="M12 32 Q32 16 52 32 Q32 48 12 32 Z" fill="#b0bec5" stroke="#78909c" stroke-width="3"/>
+                <polygon points="50,32 60,24 60,40" fill="#78909c"/>
+              </svg>
+              <div class="food-label">去皮去刺魚肉</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--red-bg); border: 2px solid #ef9a9a; border-radius: 12px; padding: 14px;">
+          <strong style="color: #b71c1c; font-size: 21px;">❌ 絕對不可吃的食物（會擋住鏡頭）：</strong>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;">
+            <span style="background:white; border:1px solid #e57373; padding:6px 12px; border-radius:8px; font-weight:bold;">❌ 蔬菜水果 (葉菜/竹筍/芭樂等)</span>
+            <span style="background:white; border:1px solid #e57373; padding:6px 12px; border-radius:8px; font-weight:bold;">❌ 牛奶與起司乳製品</span>
+            <span style="background:white; border:1px solid #e57373; padding:6px 12px; border-radius:8px; font-weight:bold;">❌ 油炸食品與炸物</span>
+            <span style="background:white; border:1px solid #e57373; padding:6px 12px; border-radius:8px; font-weight:bold;">❌ 糙米、燕麥、堅果與豆類</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 檢查前 1 天 -->
+      <div>
+        <h3 style="color:var(--primary); margin: 4px 0 10px 0;">📅 檢查前 1 天傍晚 18:00 吃藥後：嚴格無渣流質</h3>
+        <div style="background: #e1f5fe; border: 2px solid #81d4fa; border-radius: 12px; padding: 14px;">
+          <p style="margin:0 0 10px 0; font-weight:bold; color:#01579b;">喝完第一包保可淨後，只能喝「完全透明、無顆粒殘渣」的液體：</p>
+          <div class="food-card-grid">
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <rect x="22" y="16" width="20" height="36" rx="4" fill="#80d8ff" stroke="#00b0ff" stroke-width="3"/>
+                <line x1="22" y1="26" x2="42" y2="26" stroke="#fff" stroke-width="2"/>
+              </svg>
+              <div class="food-label">運動飲料:水 (1:1)</div>
+            </div>
+
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <path d="M14 26 C14 42 22 50 32 50 C42 50 50 42 50 26 Z" fill="#e0f2f1" stroke="#00897b" stroke-width="3"/>
+              </svg>
+              <div class="food-label">過濾澄清菜湯 (無菜渣)</div>
+            </div>
+
+            <div class="food-icon-item">
+              <svg class="food-icon-svg" viewBox="0 0 64 64">
+                <path d="M14 26 C14 42 22 50 32 50 C42 50 50 42 50 26 Z" fill="#fff8e1" stroke="#ffa000" stroke-width="3"/>
+              </svg>
+              <div class="food-label">過濾清魚湯/肉湯 (不吃肉)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 清腸成效對照卡 -->
+      <div class="stool-check-box">
+        <strong style="font-size:21px; color:#2e7d32;">🎯 成功清腸的標準判斷（看便便顏色）：</strong>
+        <div class="stool-status-row">
+          <div class="liquid-sample">✓</div>
+          <div>
+            <div style="font-size:21px; font-weight:bold; color:#1b5e20;">排出透明如綠茶或清水的淡黃色水便</div>
+            <div style="font-size:18px; color:#424242;">若仍有深色殘渣或濁黃便，代表水分補充不足，請持續補充足量白開水！</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 注意事項與專線 -->
+    <div class="card" id="noticeCard">
+      <div class="card-title">
+        <span>💡 慢箋用藥與急診諮詢叮嚀</span>
+        <button class="btn-audio" onclick="readCard('noticeCard')">🔊 語音說明</button>
+      </div>
+      <ul style="padding-left: 24px; margin-top: 0;">
+        <li><strong>慢性病用藥須知：</strong>降血糖藥及抗凝血劑請依醫師指示停用；其餘常規藥物請在喝清腸劑<strong>前 2 小時</strong>或喝完清腸劑<strong>後 6 小時</strong>服用。</li>
+        <li><strong>未順利排便：</strong>若在檢查前一日<strong>晚上 9 點前</strong>仍完全未有便意或排便，請立刻撥打諮詢電話詢問。</li>
+        <li><strong>24 小時免費諮詢專線：</strong><strong style="color:var(--primary-dark); font-size:24px;">0800-060-689</strong></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    document.getElementById('examDate').value = tomorrow.toISOString().split('T')[0];
+  };
+
+  function formatDateTime(dateObj) {
+    const m = dateObj.getMonth() + 1;
+    const d = dateObj.getDate();
+    const h = String(dateObj.getHours()).padStart(2, '0');
+    const min = String(dateObj.getMinutes()).padStart(2, '0');
+    return `${m}月${d}日 ${h}:${min}`;
+  }
+
+  function addHours(baseDate, hours) {
+    return new Date(baseDate.getTime() + hours * 60 * 60 * 1000);
+  }
+
+  function generateSchedule() {
+    const dateInput = document.getElementById('examDate').value;
+    const timeInput = document.getElementById('examTime').value;
+    const type = document.getElementById('examType').value;
+
+    if (!dateInput || !timeInput) {
+      alert("請完整選擇檢查日期與時間！");
+      return;
+    }
+
+    const examDateTime = new Date(`${dateInput}T${timeInput}`);
+    const dayBefore = new Date(examDateTime);
+    dayBefore.setDate(dayBefore.getDate() - 1);
+
+    const day2Before = new Date(examDateTime);
+    day2Before.setDate(day2Before.getDate() - 2);
+
+    let items = [];
+
+    // 檢查前 2 天
+    items.push({
+      time: `${day2Before.getMonth() + 1}月${day2Before.getDate()}日 (全天)`,
+      type: 'normal',
+      text: '開始「低渣飲食」：只吃白稀飯、去邊白吐司、白麵條、蒸蛋。不要吃任何青菜、水果與牛奶。'
+    });
+
+    // 檢查前 1 天中午
+    const noonDayBefore = new Date(dayBefore);
+    noonDayBefore.setHours(12, 0, 0, 0);
+    items.push({
+      time: formatDateTime(noonDayBefore),
+      type: 'normal',
+      text: '若醫師有開立軟便劑，請於此時服用 2 顆軟便劑。'
+    });
+
+    // 檢查前 1 天傍晚 18:00
+    const dose1Time = new Date(dayBefore);
+    dose1Time.setHours(18, 0, 0, 0);
+    items.push({
+      time: formatDateTime(dose1Time),
+      type: 'highlight',
+      text: '喝第 1 包保可淨：用 150 c.c. 冷水泡勻 3~5 分鐘後喝下。絕對不可直接乾吞藥粉！'
+    });
+
+    // 檢查前 1 天 19:00 ~ 睡前喝水
+    const water1Time = new Date(dayBefore);
+    water1Time.setHours(19, 0, 0, 0);
+    items.push({
+      time: `${formatDateTime(water1Time)} ~ 睡前`,
+      type: 'normal',
+      text: '陸續喝完 2000 c.c. 水或運動飲料（約每 15~30 分鐘喝 1 杯 250 c.c.，共喝 8 杯）。'
+    });
+
+    // 檢查當天服藥與喝水時程
+    if (type === 'normal_colon') {
+      const dose2Time = addHours(examDateTime, -4);
+      const fastTime = addHours(examDateTime, -5);
+
+      items.push({
+        time: formatDateTime(fastTime),
+        type: 'urgent',
+        text: '檢查前 5 小時：嚴格禁食固體食物！'
+      });
+      items.push({
+        time: formatDateTime(dose2Time),
+        type: 'highlight',
+        text: '喝第 2 包保可淨（檢查前 4 小時）：用 150 c.c. 冷水泡勻立刻喝完。'
+      });
+      items.push({
+        time: `${formatDateTime(dose2Time)} ~ 檢查前`,
+        type: 'normal',
+        text: '陸續喝水 750 c.c.（約 3 杯），觀察便便是否變成淡黃色清澈水狀。'
+      });
+    } else if (type === 'normal_colon_stomach') {
+      const dose2Time = addHours(examDateTime, -5);
+
+      items.push({
+        time: formatDateTime(dose2Time),
+        type: 'highlight',
+        text: '喝第 2 包保可淨（檢查前 5 小時）：用 150 c.c. 冷水泡勻喝完。'
+      });
+      items.push({
+        time: `${formatDateTime(dose2Time)} 喝完後儘速`,
+        type: 'normal',
+        text: '陸續補充喝水 500 c.c.（約 2 杯）。'
+      });
+      items.push({
+        time: `${formatDateTime(dose2Time)} 起`,
+        type: 'urgent',
+        text: '因為有合做胃鏡，此時起完全「禁食、禁水」，一口水都不能喝！'
+      });
+    } else if (type === 'painless_morning') {
+      const examDay = new Date(examDateTime);
+      const dose2 = new Date(examDay.setHours(4, 0, 0, 0));
+      const water2 = new Date(examDay.setHours(4, 30, 0, 0));
+
+      items.push({
+        time: formatDateTime(dose2),
+        type: 'highlight',
+        text: '清晨 04:00：喝第 2 包保可淨（150 c.c. 沖泡）。'
+      });
+      items.push({
+        time: `${formatDateTime(water2)} ~ 05:00`,
+        type: 'normal',
+        text: '陸續喝水 500 c.c.（2 杯），請務必在 05:00 前喝完。'
+      });
+      items.push({
+        time: '清晨 05:00 起',
+        type: 'urgent',
+        text: '完全禁食禁水！為確保無痛麻醉安全，一口水都不可喝。'
+      });
+    } else if (type === 'painless_afternoon') {
+      const examDay = new Date(examDateTime);
+      const dose2 = new Date(examDay.setHours(9, 0, 0, 0));
+      const water2 = new Date(examDay.setHours(9, 30, 0, 0));
+
+      items.push({
+        time: formatDateTime(dose2),
+        type: 'highlight',
+        text: '上午 09:00：喝第 2 包保可淨（150 c.c. 沖泡）。'
+      });
+      items.push({
+        time: `${formatDateTime(water2)} ~ 10:00`,
+        type: 'normal',
+        text: '陸續喝水 500 c.c.（2 杯），請務必在 10:00 前喝完。'
+      });
+      items.push({
+        time: '上午 10:00 起',
+        type: 'urgent',
+        text: '完全禁食禁水！為確保無痛麻醉安全，一口水都不可喝。'
+      });
+    }
+
+    const timelineContainer = document.getElementById('scheduleTimeline');
+    timelineContainer.innerHTML = '';
+    items.forEach(item => {
+      const div = document.createElement('div');
+      div.className = `timeline-item ${item.type}`;
+      div.innerHTML = `
+        <div class="time-badge">${item.time}</div>
+        <div style="font-size:22px; font-weight:600;">${item.text}</div>
+      `;
+      timelineContainer.appendChild(div);
+    });
+
+    document.getElementById('resultArea').style.display = 'block';
+    timelineContainer.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function stopSpeech() {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+  }
+
+  function readCard(elementId) {
+    if (!('speechSynthesis' in window)) {
+      alert("抱歉，您的裝置暫不支援自動語音播放。");
+      return;
+    }
+    stopSpeech();
+
+    const element = document.getElementById(elementId);
+    let textToRead = element.innerText.replace(/🔊 語音說明|⏹ 停止朗讀/g, '').trim();
+
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+    utterance.lang = document.getElementById('voiceLang').value;
+    utterance.rate = 0.85; // 專為高齡長輩調整舒緩語速
+    utterance.pitch = 1.0;
+
+    window.speechSynthesis.speak(utterance);
+  }
+</script>
+
+</body>
+</html>
